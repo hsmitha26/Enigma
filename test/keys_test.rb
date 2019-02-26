@@ -12,7 +12,11 @@ class KeysTest < Minitest::Test
   end
 
   def test_it_generates_five_digits_at_random
-    skip
-    assert_equal 5, @k.random_number
+    @k.random_number
+    assert_equal 5, @k.number_length
+  end
+
+  def test_random_number_is_string
+    assert_equal String, @k.random_number.class
   end
 end
