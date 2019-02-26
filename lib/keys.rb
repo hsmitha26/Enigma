@@ -12,4 +12,8 @@ class Keys
     end
     @key
   end
+
+  def number_length
+    @key.length
+  end
 end
