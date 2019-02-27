@@ -50,4 +50,8 @@ class ShiftTest < Minitest::Test
     assert_equal [3, 27, 73, 20], @shift.shift_values("02715", "040895")
   end
 
+  def test_character_set_length
+    assert_equal 27, @shift.character_set.length
+  end
+
 end

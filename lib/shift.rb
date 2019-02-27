@@ -30,4 +30,8 @@ class Shift
     end
   end
 
+  def character_set
+    ("a".."z").to_a << " "
+  end
+
 end
