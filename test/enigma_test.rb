@@ -18,7 +18,6 @@ class EnigmaTest < Minitest::Test
     expected = ["h", "e", "l", "l", "o", " ", "w", "o", "r", "l", "d", "!"]
     assert_equal expected, @enigma.message("hello world!")
     assert_equal expected, @enigma.message("heLlo woRld!")
-
   end
 
   def test_encrypt
@@ -52,7 +51,7 @@ class EnigmaTest < Minitest::Test
   end
 
   def test_encrypt_and_decrypt_with_random_key_and_current_date
-    skip
+    
     encrypted_message = @enigma.encrypt("hello world")
     # binding.pry
     decrypted_message = @enigma.decrypt(encrypted_message[:encryption], encrypted_message[:key])
