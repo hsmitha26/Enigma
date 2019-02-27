@@ -1,9 +1,11 @@
 require './lib/shift'
 require './lib/offsets'
+require './lib/keys'
 
 class Enigma
 
   include Offset
+  include Keys
 
   def initialize
     @shift = Shift.new
@@ -11,10 +13,11 @@ class Enigma
   end
 
   def message(word)
-    message_array = word.split(//)
+
+    message_array = word.downcase.split(//)
   end
 
-  def encrypt(word, key, date = current_date)
+  def encrypt(word, key = random_number, date = current_date)
     message_array = message(word)
     shift = @shift.shift_values(key, date)
     translated = message_array.map do |letter|
@@ -27,6 +30,7 @@ class Enigma
         shift = shift.rotate
         replaced
       end
+      # binding.pry
     end.join
     translation(translated, key, date)
   end
