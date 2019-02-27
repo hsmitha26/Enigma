@@ -17,4 +17,9 @@ class Shift
     date **2
   end
 
+  def last_four(given_date)
+    date = date_squared(given_date).to_s
+    four_digits = date[-4..-1].to_i
+  end
+
 end
