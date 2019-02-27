@@ -1,11 +1,10 @@
+require './lib/shift'
+
 class Enigma
 
-  # def encrypt(message, key=nil, date=nil)
-  #
-  # end
-  def message(message)
-    message_array = message.split(//)
+  def message(word)
+    message_array = word.split(//)
     message_array.each_slice(4).to_a
   end
-  # binding.pry
+
 end
