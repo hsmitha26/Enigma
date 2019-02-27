@@ -1,16 +1,12 @@
-class Offset
-
-  def initialize
-    @date
-  end
+module Offset
 
   def current_date
-    @date = Time.new
-    @date = @date.strftime("%d%m%y")
-    binding.pry
+    date = Time.new
+    date = date.strftime("%d%m%y")
   end
 
   def date_length
-    @date.length
+    current_date.length
   end
+  
 end
