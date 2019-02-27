@@ -13,7 +13,6 @@ class Enigma
   end
 
   def message(word)
-
     message_array = word.downcase.split(//)
   end
 
@@ -30,7 +29,6 @@ class Enigma
         shift = shift.rotate
         replaced
       end
-      # binding.pry
     end.join
     translation(translated, key, date)
   end
