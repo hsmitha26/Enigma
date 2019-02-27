@@ -5,12 +5,13 @@ module Keys
     if key.length < 5
       number = 5 - key.length
       key.rjust(number,"0")
+    else
+      key
     end
-    key
   end
 
   def number_length
     random_number.length
   end
-  
+
 end
