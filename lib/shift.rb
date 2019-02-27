@@ -23,11 +23,11 @@ class Shift
     four_digits.split(//).map {|string| string.to_i}
   end
 
-  def keys_plus_offsets(number, date)
+  def shift_values(number, date)
     array = [make_keys(number), last_four(date)]
     shift = array.transpose.map do |x|
       x.sum
     end
   end
-  
+
 end
