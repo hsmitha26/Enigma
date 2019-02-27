@@ -37,4 +37,8 @@ class ShiftTest < Minitest::Test
   def test_date_is_a_string
     assert_equal String, @shift.current_date.class
   end
+
+  def test_it_can_square_date_from_given_date
+    assert_equal 1672401025, @shift.date_squared
+  end
 end
