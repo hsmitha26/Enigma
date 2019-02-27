@@ -6,6 +6,7 @@ require './lib/offsets'
 class ShiftTest < Minitest::Test
 
   include Keys
+  include Offset
 
   def setup
     @shift = Shift.new
@@ -26,5 +27,14 @@ class ShiftTest < Minitest::Test
 
   def test_it_can_split_given_key
     assert_equal [12, 23, 34, 45], @shift.make_keys("12345")
+  end
+
+  def test_date_length_is_six
+    @shift.current_date
+    assert_equal 6, @shift.date_length
+  end
+
+  def test_date_is_a_string
+    assert_equal String, @shift.current_date.class
   end
 end
