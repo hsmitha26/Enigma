@@ -41,4 +41,8 @@ class ShiftTest < Minitest::Test
   def test_it_can_square_date_from_given_date
     assert_equal 1672401025, @shift.date_squared("040895")
   end
+
+  def test_it_can_find_last_four_digits
+    assert_equal 1025, @shift.last_four("040895")
+  end
 end
