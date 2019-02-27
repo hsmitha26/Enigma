@@ -47,7 +47,7 @@ class ShiftTest < Minitest::Test
   end
 
   def test_it_can_add_keys_and_offsets_with_given_number_and_date
-    assert_equal [3, 27, 73, 20], @shift.keys_plus_offsets("02715", "040895")
+    assert_equal [3, 27, 73, 20], @shift.shift_values("02715", "040895")
   end
 
 end
